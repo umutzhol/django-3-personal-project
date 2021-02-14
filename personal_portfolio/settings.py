@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'j)jddd9%z%)o=$-l25i-ohi*1&6!g35&c6rfeyolwx#4w8yys@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Umutai.pythonanywhere.com']
 
 
 # Application definition
@@ -124,10 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-   os.path.join(BASE_DIR,"portfolio", "static")
-]
+
+STATIC_ROOT = os.path.join(BASE_DIR / 'static')
+
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
